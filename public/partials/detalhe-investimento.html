@@ -1,0 +1,57 @@
+<div style="background-color: #edeff0">
+    <div class="page-header">
+        <h1>Resgate</h1>
+    </div>
+    <h3 class="subtitulo">DADOS DO INVESTIMENTO</h3>
+    <div class="container col-md-12">
+        <section class="panel painel-principal">
+            <div class="destaques">
+                <div>
+                    <label>Nome</label>
+                    <p>{{item.nome}}</p>
+                </div>
+                <div>
+                    <label>Saldo total disponível</label>
+                    <p>{{item.saldoTotalDisponivel | currency: 'R$ ' : 2}}</p>
+                </div>
+                <div>
+                    <label>Valor total a resgatar</label>
+                    <p>{{valorResgastes | currency: 'R$ ' : 2}}</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <h3 class="subtitulo">RESGATE DO SEU JEITO</h3>
+
+    <div class="container col-md-12">
+        <form novalidate name="formulario" class="row" ng-submit="submeter()">
+            <section class="panel-principal form-group">
+                <table class="tbl form-group">
+                    <thead>
+                    <tr>
+                        <th>AÇÃO</th>
+                        <th>SALDO ACUMULADO</th>
+                        <th>VALOR A RESGATAR</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="acao in item.acoes">
+                        <td>{{acao.nome}}</td>
+                        <td>{{(item.saldoTotalDisponivel*acao.percentual/100) | currency: 'R$ ' : 2}}</td>
+                        <td>
+                            <input type="number" class="form-control" format="currency" ng-change="validarFormulario(item, $index)" ng-model="valoresResgateAcoes[$index]" name="resgate" placeholder="R$ 0.00" required>
+                            <span ng-show="(formulario.$dirty || formulario.$touched) && valoresResgateAcoes[$index] > (item.saldoTotalDisponivel*acao.percentual/100)"
+                                  class="form-control alert-danger">
+                                Saldo insuficiente para a ação.
+                            </span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+            <button type="submit" class="btn btn-primary resgatar" ng-disabled="formulario.$invalid">
+                CONFIRMAR RESGATE
+            </button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,113 @@
+div.page-header {
+    color: white;
+    margin-top: 0;
+    padding-top: 10px;
+    background-color: #475c61;
+    text-align: left;
+    border-bottom: #39494f;
+    border-bottom-style: solid;
+    border-bottom-width: 20px;
+}
+
+.clicavel {
+    cursor: pointer;
+}
+
+div.row {
+    margin: 13px;
+    white-space: nowrap;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px #aaaaaa;
+}
+
+div.panel {
+    /*display: inline-block;*/
+    /*padding: unset;*/
+    /*margin-left: 10px;*/
+    /*margin-right: 10px;*/
+}
+.panel-principal {
+    padding: 20px;
+    border-radius: 10px ;
+    border: solid 1px #ccc;
+    margin-bottom: 30px;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: white;
+}
+
+section.atributo {
+    color: #aaaaaa;
+    text-align: center;
+    margin: 0;
+    padding: unset;
+}
+
+h1 {
+    margin-left: 15px;
+}
+
+h3{
+    text-transform: uppercase;
+    color: #777;
+}
+
+.container {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.destaques div{
+    width: 33.3%;
+    border-left: solid 1px #ccc;
+    padding: 10px;
+}
+.destaques div:first-child{
+    border: none;
+}
+
+.destaques{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.destaques div label, .destaques div p{
+    margin: 0;
+}
+
+.tbl{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tbl td{
+    border-collapse: collapse;
+}
+.tbl thead th{
+    width: 33.3%;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: left;
+}
+.tbl tbody tr:nth-child(odd){
+    background-color: #f5f5f5;
+}
+.tbl tbody tr td{
+    padding: 5px 0;
+    border-bottom: solid 1px #ddd;
+}
+.tbl input{
+    padding: 5px;
+    width: 100%;
+}
+
+button.resgatar {
+    float: right;
+    margin-right: 15px;
+}
+
+.subtitulo {
+    margin-left: 15px;
+    color: #869599;
+}

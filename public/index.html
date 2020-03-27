@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="plataforma-investimentos">
+    <head>
+        <base href="/">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Plataforma de Investimentos</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/aplicacao-investimentos.css">
+        <script src="js/lib/angular.min.js"></script>
+        <script src="js/lib/angular-route.min.js"></script>
+        <script src="js/lib/angular-resource.min.js"></script>
+        <script src="js/lib/ui.bootstrap.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/controllers/listar-investimentos-controller.js"></script>
+        <script src="js/controllers/detalhe-investimento-controller.js"></script>
+        <script src="js/services/api-rest-service.js"></script>
+    </head>
+    <body style="background-color: #edeff0">
+        <ng-view></ng-view>
+    </body>
+</html>
